@@ -70,11 +70,34 @@ To fix it, you have to resize your terminal in Linux, OSX or windows using your 
 
 2) Set your AWS credentials:
 
+You can set your AWS credentials using environment variables or by using an AWS profile.
+
+a) Using environment variables:
+
 ```shell
 export AWS_ACCESS_KEY_ID="XXXXXXXXX"
 export AWS_SECRET_ACCESS_KEY="XXXXXXXXX"
 export AWS_SESSION_TOKEN="XXXXXXXXX"
 ```
+
+b) Using AWS profile:
+
+1. Set up your AWS credentials file (usually located at ~/.aws/credentials) with your profile:
+
+```
+[myprofile]
+aws_access_key_id = XXXXXXXXX
+aws_secret_access_key = XXXXXXXXX
+aws_session_token = XXXXXXXXX
+```
+
+2. Set the AWS_PROFILE environment variable:
+
+```shell
+export AWS_PROFILE="myprofile"
+```
+
+Replace "myprofile" with your actual profile name.
 
 ### Installation
 
